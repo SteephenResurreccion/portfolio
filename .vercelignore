@@ -1,0 +1,13 @@
+/*
+!/app
+!/components
+!/content
+!/lib
+!/assets
+!/public
+!/package.json
+!/package-lock.json
+!/next.config.ts
+!/postcss.config.mjs
+!/tsconfig.json
+!/vercel.json

@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@source not "../docs";
+@source not "../UserPastedData";
+
+/* Six colour tokens (design-system-v20 §1). Dark mode is exactly this swap, nothing else. */
+:root {
+  color-scheme: light dark;
+  --paper: #F3F0E8; --ink: #1C1B18; --muted: #5E5A52;
+  --rule:  #D3CCBD; --link: #1A5F7A; --link-hover: #0E4458;
+
+  /* Type roles, phone values (below 48rem). Desktop values in the media query below. */
+  --fs-body: 1rem;            --lh-body: 1.625rem;          /* 16/26 */
+  --fs-name: 1.0625rem;       --lh-name: 1.5rem;            /* 17/24 */
+  --fs-ui: 0.9375rem;         --lh-ui: 1.5rem;              /* 15/24 */
+  --fs-page-title: 2rem;      --lh-page-title: 2.5rem;      /* 32/40 */
+  --fs-dek: 1.1875rem;        --lh-dek: 1.75rem;            /* 19/28 */
+  --fs-status: 0.9375rem;     --lh-status: 1.4375rem;       /* 15/23 */
+  --fs-small: 0.875rem;       --lh-small: 1.375rem;         /* 14/22 */
+  --fs-meta-date: 0.8125rem;                                /* 13, inherits line height */
+  --fs-stack: 0.8125rem;      --lh-stack: 1.25rem;          /* 13/20 */
+  --fs-entry-date: 0.8125rem; --lh-entry-date: 1.25rem;     /* 13/20 */
+  --fs-section-title: 1.25rem; --lh-section-title: 1.75rem; /* 20/28 */
+  --fs-block-title: 1.0625rem; --lh-block-title: 1.5625rem; /* 17/25 */
+  --fs-featured-title: 1.1875rem; --lh-featured-title: 1.6875rem; /* 19/27 */
+  --fs-compact-title: 1rem;   --lh-compact-title: 1.5rem;   /* 16/24 */
+  --fs-compact-body: 0.9375rem; --lh-compact-body: 1.5rem;  /* 15/24 */
+}
+@media (min-width: 48rem) {
+  :root {
+    --fs-body: 1.0625rem;       --lh-body: 1.75rem;           /* 17/28 */
+    --fs-page-title: 2.5rem;    --lh-page-title: 3rem;        /* 40/48 */
+    --fs-dek: 1.3125rem;        --lh-dek: 2rem;               /* 21/32 */
+    --lh-status: 1.5rem;                                      /* 15/24 */
+    --fs-small: 0.9375rem;      --lh-small: 1.5rem;           /* 15/24 */
+    --fs-meta-date: 0.875rem;                                 /* 14 */
+    --fs-stack: 0.875rem;       --lh-stack: 1.375rem;         /* 14/22 */
+    --fs-entry-date: 0.875rem;  --lh-entry-date: 1.5rem;      /* 14/24 */
+    --fs-section-title: 1.375rem; --lh-section-title: 1.875rem; /* 22/30 */
+    --fs-block-title: 1.125rem; --lh-block-title: 1.75rem;    /* 18/28 */
+    --fs-featured-title: 1.3125rem; --lh-featured-title: 1.875rem; /* 21/30 */
+    --fs-compact-title: 1.0625rem; --lh-compact-title: 1.625rem; /* 17/26 */
+    --fs-compact-body: 1rem;    --lh-compact-body: 1.625rem;  /* 16/26 */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #16140F; --ink: #EDE8DC; --muted: #A8A194;
+    --rule:  #3A362E; --link: #6FB3CF; --link-hover: #8CC7DF;
+  }
+}
+
+/* Only md exists, so sm/lg/xl cannot creep in. */
+@theme { --breakpoint-*: initial; --breakpoint-md: 48rem; }
+
+@theme inline {
+  --color-*: initial;
+  --color-paper: var(--paper); --color-ink: var(--ink); --color-muted: var(--muted);
+  --color-rule: var(--rule);   --color-link: var(--link); --color-link-hover: var(--link-hover);
+
+  --font-sans: var(--font-plex-sans), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, Consolas, monospace;
+
+  --text-body: var(--fs-body); --text-body--line-height: var(--lh-body);
+  --text-name: var(--fs-name); --text-name--line-height: var(--lh-name);
+  --text-ui: var(--fs-ui); --text-ui--line-height: var(--lh-ui);
+  --text-page-title: var(--fs-page-title); --text-page-title--line-height: var(--lh-page-title);
+  --text-dek: var(--fs-dek); --text-dek--line-height: var(--lh-dek);
+  --text-status: var(--fs-status); --text-status--line-height: var(--lh-status);
+  --text-small: var(--fs-small); --text-small--line-height: var(--lh-small);
+  --text-meta-date: var(--fs-meta-date); --text-meta-date--line-height: inherit;
+  --text-stack: var(--fs-stack); --text-stack--line-height: var(--lh-stack);
+  --text-entry-date: var(--fs-entry-date); --text-entry-date--line-height: var(--lh-entry-date);
+  --text-section-title: var(--fs-section-title); --text-section-title--line-height: var(--lh-section-title);
+  --text-block-title: var(--fs-block-title); --text-block-title--line-height: var(--lh-block-title);
+  --text-featured-title: var(--fs-featured-title); --text-featured-title--line-height: var(--lh-featured-title);
+  --text-compact-title: var(--fs-compact-title); --text-compact-title--line-height: var(--lh-compact-title);
+  --text-compact-body: var(--fs-compact-body); --text-compact-body--line-height: var(--lh-compact-body);
+}
+
+@layer base {
+  body { background: var(--paper); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+}
+
+/* Home's stretched title links: the focus ring moves to the overlay so it frames the whole entry. */
+.stretched-link:focus-visible { outline: none; }
+.stretched-link:focus-visible::after { outline: 2px solid var(--link); outline-offset: 4px; }
+
+/* Diagram note boxes: fills set from variables are not forced, so switch them in forced colors. */
+.sync-note { fill: var(--paper); stroke: var(--rule); }
+@media (forced-colors: active) { .sync-note { fill: Canvas; stroke: CanvasText; } }

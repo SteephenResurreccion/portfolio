@@ -1,0 +1,18 @@
+# Private knowledge vault: its own private git repo, never in the public site repo
+/docs/
+/UserPastedData/
+# Next.js / Vercel
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.env*
+!.env.example
+# Agent files: local only (they name local paths and private codebases)
+/CLAUDE.md
+/AGENTS.md
+/.claude/
+/.superpowers/
+*.stackdump
