@@ -58,7 +58,7 @@ export const lipaactionDecisions = {
     heading: 'Pinning the validated model',
     paragraphs: [
       [
-        "I deployed it as a FastAPI service on a VM and pinned the validated model files, feature order and library versions, so the model that runs is exactly the one we validated. A test checks that the model files haven't changed. The model reads its inputs by position, not by name, so a changed feature order could stop it with an error or, worse, quietly give wrong priorities. And code that works on one library version can return an error on another.",
+        "I deployed it as a FastAPI service on a VM and pinned the validated model files, feature order and library versions. A test checks that the model files haven't changed. The model reads its inputs by position, not by name, so a changed feature order could stop it with an error or, worse, quietly give wrong priorities. And code that works on one library version can return an error on another.",
       ],
     ],
   },
