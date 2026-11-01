@@ -59,6 +59,7 @@ const EXTERNAL = {
   'https://noelagritv.com': ['noelagritv.com (opens in new tab)'],
   'https://github.com/SteephenResurreccion/noel-agritv': ['Code on GitHub for NoelAgriTV (opens in new tab)'],
   'https://github.com/SteephenResurreccion/XiaoLongBaoLipa': ['Code on GitHub for Xiao Long Bao Lipa (opens in new tab)'],
+  'https://xiao-long-bao-lipa.vercel.app': ['Try the demo of Xiao Long Bao Lipa (opens in new tab)'],
   'https://github.com/ShanPla/IRIS-Mobile-Frontend': ['App code on GitHub for IRIS (opens in new tab)'],
 }
 const IMAGES = {

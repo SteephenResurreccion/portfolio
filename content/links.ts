@@ -6,6 +6,8 @@ export const EXTERNAL = {
   noelagritvSite: 'https://noelagritv.com',
   noelagritvRepo: 'https://github.com/SteephenResurreccion/noel-agritv',
   xiaoLongBaoRepo: 'https://github.com/SteephenResurreccion/XiaoLongBaoLipa',
+  // The labelled test-mode demo: no real orders, payments, deliveries or SMS.
+  xiaoLongBaoDemo: 'https://xiao-long-bao-lipa.vercel.app',
   irisAppRepo: 'https://github.com/ShanPla/IRIS-Mobile-Frontend',
 } as const
 
